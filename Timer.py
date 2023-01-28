@@ -1,34 +1,20 @@
-from tkinter import *
-from main import *
-
-# timeLimit = "D"
-#
-# def timer():
-#     global my_label
-#     root = Tk()
-#     root.title("RUN")
-#     root.geometry("600x400")
-#
-#     my_label = Label(root, text="YOU HAVE 10 SECONDS TO CHOOSE")
-#
-#     my_label.pack(pady=20)
-#     my_label.after(10000, update)
-#     root.mainloop()
-#
-#
-# def update():
-#     global timeLimit
-#     timeLimit = "Time is up. YOU LOOSE!"
-#     my_label.config(text=timeLimit)
-#
-
-
-
-import turtle
 import time
+global timeLimit
+from Options import *
 
 
-timeLimit = 10
+class Time:
+    def __init__(self):
+        self.timeLimit = 10
+        self.startTime = time.time()
+
+    def timer(self):
+        while True:
+            elapsedTime = time.time() - self.startTime
+            # print(timeLimit - int(elapsedTime))
+            if elapsedTime > self.timeLimit:
+                print("YOU TOOK TOO LONG!GAME OVER")
+                break
 
 
 

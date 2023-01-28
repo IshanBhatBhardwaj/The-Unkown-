@@ -17,6 +17,11 @@ def printmainMonster():
 
 
 
-def test():
-    print("Hello")
+def printOtherMonster():
+    print("        ^__^\n" +
+    "        (oo)\\_______\n" +
+    "        (__)\\       )\\/\\\n" +
+    "            ||----w |\n" +
+    "            ||     ||\n", end =  "")
+
 

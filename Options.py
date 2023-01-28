@@ -1,9 +1,19 @@
 space = "    "
 import pyfiglet
 import time
-wait = 1.5
+wait = 0
 from Monsters import *
 from Timer import *
+# from main import *
+global future
+from Timer import *
+
+# sevenCount = 0
+
+def gameOver():
+    global game
+    game = True
+
 
 def oneOption():
     print("1. Look around", end = space)
@@ -65,6 +75,10 @@ def twoOption():
         print("You have second doubts")
         twoOption()
 
+
+
+
+
 def threeOption():
     print("1. Turn Left", end=space)
     print("2. Turn Right")
@@ -74,14 +88,151 @@ def threeOption():
         print(pyfiglet.figlet_format("ROOOAAARRR",justify= "center",width= 110))
         time.sleep(.5)
         printmainMonster()
-        timer()
-        print("heLLO")
+        time.sleep(wait)
+        print("The beast of the unknown is hunting you")
+        time.sleep(wait)
+        print("Escape the cave")
+        time.sleep(wait)
+        print("RUN QUICK")
+        fourOption()
 
 
 
 
 
+    if option == "2":
+        print(pyfiglet.figlet_format("MOOOOOOO", justify="center", width=110))
+        time.sleep(.5)
+        printOtherMonster()
+        time.sleep(wait)
+        print("The beast of the unknown is hunting you")
+        time.sleep(wait)
+        print("Escape the cave")
+        time.sleep(wait)
+        print("RUN QUICK")
+        fiveOption()
 
+def fourOption():
+    print("1. Turn Left", end=space)
+    print("2. Turn Right")
+    option = input()
+
+    if option == "1":
+        fiveOption()
+
+    if option == "2":
+        sixOption()
+
+def fiveOption():
+    print("1. Turn Left", end=space)
+    print("2. Turn Right")
+    option = input()
+
+    if option == "1":
+        elevenOption()
+
+    if option == "2":
+        twelveOption()
+
+def sixOption():
+    print("1. Turn Left", end=space)
+    print("2. Turn Right")
+    option = input()
+
+    if option == "1":
+        sevenOption()
+
+    if option == "2":
+        eightOption()
+
+def sevenOption():
+    print("1. Turn Left", end=space)
+    print("2. Turn Right")
+    option = input()
+
+    elevenOption()
+def eightOption():
+    print("1. Turn Left", end=space)
+    print("2. Turn Right")
+    option = input()
+
+    if option == "1":
+        nineOption()
+
+    if option == "2":
+        tenOption()
+
+def nineOption():
+    print("YOU RAN INTO A DEAD END")
+
+
+def tenOption():
+    print("YOU ESCAPED THE CAVE")
+
+
+def elevenOption():
+    print("1. Turn Left", end=space)
+    print("2. Turn Right")
+    option = input()
+
+    fourteenOption()
+
+def twelveOption():
+    print("1. Turn Left", end=space)
+    print("2. Turn Right")
+    option = input()
+
+    if option == "1":
+        thirteenOption()
+
+    if option == "2":
+        fourteenOption()
+
+
+def thirteenOption():
+    print("1. Turn Left", end=space)
+    print("2. Turn Right")
+    option = input()
+
+    if option == "1":
+        fifteenOption()
+
+    if option == "2":
+        sixteenOption()
+
+
+def fourteenOption():
+    print("1. Turn Left", end=space)
+    print("2. Turn Right")
+    option = input()
+
+    sixteenOption()
+
+def fifteenOption():
+    print("1. Turn Left", end=space)
+    print("2. Turn Right")
+    option = input()
+
+    if option == "1":
+        seventeenOption()
+
+    if option == "2":
+        eighteenOption()
+
+
+def sixteenOption():
+    print("1. Turn Left", end=space)
+    print("2. Turn Right")
+    option = input()
+
+    fourOption()
+
+
+def seventeenOption():
+    print("YOU RAN INTO A DEAD END.")
+
+def eighteenOption():
+    print("YOU ESCAPED THE CAVE")
 
 
 
