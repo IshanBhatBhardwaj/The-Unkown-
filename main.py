@@ -1,5 +1,7 @@
 import pyfiglet
 import time
+
+import Options
 from Messages import *
 from Options import *
 
@@ -14,7 +16,11 @@ sevenCount = 0
 
 count = 0
 
-
+def end_game(x):
+    if x == True:
+        return True
+    else:
+        return False
 
 
 
@@ -24,6 +30,7 @@ if __name__ == '__main__':
 
 
     while GAME == False:
+
         while game == False:
             count += 1
             if count == 1:
@@ -33,10 +40,19 @@ if __name__ == '__main__':
             oneOption()
             time.sleep(wait)
 
-            twoOption()
+            if twoOption() == True:
+                break
+            else:
+                pass
+
+            clueOption()
+
             time.sleep(wait)
 
-            threeOption()
+            if threeOption() == True:
+                break
+            else:
+                break
 
 
         print("Do you want to play again?")
@@ -56,9 +72,6 @@ if __name__ == '__main__':
 
 
 # print("Game over")
-
-
-
 
 
 
